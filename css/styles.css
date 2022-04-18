@@ -1,5 +1,15 @@
 /* Variables */
-
+:root{
+    --blanco:#ffffff;
+    --negro:#000000;
+    --gris:#676767;
+    --primario:#a63a3a;
+    --primarioOscuro:#b22e2e;
+    --rojoOscuro:#980C0B;
+    --fuentePrincipal:'DM Serif Display', serif;
+    --fuenteMenu:'Josefin Sans', sans-serif;
+  
+  }
 
 
 /* Box-sizing */
@@ -27,6 +37,27 @@ html {
       padding: 0;
   }
 
+/* Globales */
+
+h1,h2,h3,h4,p{
+    font-family: var(--fuentePrincipal);
+    color: var(--negro);
+}
+h1{
+    font-size: 4.8rem;
+}
+h2{
+    font-size: 5,2rem;
+}
+h3{
+    font-size: 4,8rem;
+}
+h4{
+    font-size: 4rem;
+}
+p{
+    font-size: 2rem;
+}
 
 
   /* Parallax */
@@ -65,7 +96,7 @@ html {
     background: url("../img/background.JPG") center / cover;
 }
 .bg-2{
-    background: url("../img/background.JPG") center / cover;
+    background: url("../img/menu.JPG") center / cover;
 }
 .bg-3{
     background:url("../img/background.JPG") center / cover;
@@ -77,33 +108,90 @@ html {
     height:100vh ;
     background: #fff;
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
     z-index: 2;
 }
 
-h1{
-    margin: 0 auto;
-    width: 90%;
-    font-size: 130px;
-    font-weight:900 ;
-    line-height: 1.1;
-    letter-spacing: -2px;
-    color: white;
-    word-spacing: 100vw;
-    text-align: center;
-    text-transform: uppercase;
-}
 
-.parallax h1 {
-    color: white;
-    text-shadow: 0 10px 10px rgba(0,0,0,0.1);
-}
-.parallax:nth-child(1) h1 {
-    text-align: left;
-}
 
-.normal h1 {
-    color: #333;
-}
+
+
+
+/* Navegacion */
+    .navegacion{
+  
+
+        background-color: var(--blanco);
+        display: flex;
+       
+        justify-content: space-between;
+        height: 12rem;
+        position: absolute;        
+        
+       
+       }
+       
+       .logo{
+        
+         margin-left: 5rem;
+         display: flex;
+        
+       }
+       .logo__imagen{
+       
+        height:10rem;
+        align-items: center;
+       
+       }
+       
+       .navegacion__enlaces{
+         
+    
+        display: grid;
+        grid-template-columns:repeat(5,1fr);
+        column-gap: 2rem;
+        margin-right: 5rem;
+        
+       }
+       .navegacion__enlace{
+         font-size: 2rem;
+         text-transform: uppercase;
+         font-family: var(--fuenteMenu);
+         text-decoration: none;
+         color: var(--primario);
+        
+       }
+
+ /* Nosotros */
+ 
+/* Resolucion minima 950 */
+ .nosotros{
+    display: grid;
+    grid-template-columns:repeat(2,1fr);
+    column-gap: 2rem;
+    height: 80rem;
+   
+   
+
+ }
+
+ .nosotros__imagen{
+    height:80rem;
+ }
+
+ .nosotros__texto{
+     
+     text-align: left;
+ }
+
+ /* Menu */
+
+ .menu__texto{
+     display:grid;
+     grid-template-rows: repeat(2,1fr);
+    
+     font-size: 15rem;
+     color: var(--negro);
+     font-family: var(--fuenteMenu);
+     
+ }
